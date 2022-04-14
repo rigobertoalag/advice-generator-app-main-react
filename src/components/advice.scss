@@ -1,0 +1,63 @@
+@import '../styles.scss';
+
+.advice{
+    width: 40%;
+    height: 35%;
+    background-color: $GrayishBlue;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-number{
+    color: $NeonGreen;
+}
+.ad-body{
+    height: 50%;
+    width: 85%;
+}
+.ad-body-text{
+    color: $LightCyan;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.divider-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+.divider{
+    border-bottom: 1px solid $NeonGreen;
+    width: 60%;
+    margin: 0 5%;
+    border-radius: 2em;
+}
+.divider-pattern{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.random-btn{
+    position: absolute;
+    margin-top: 18%;
+    height: 4em;
+    width: 4em;
+    background-color: $NeonGreen;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.random-btn{
+    cursor: pointer;
+}
+.random-btn:hover{
+    box-shadow: 1px 1px 15px $NeonGreen;
+}
