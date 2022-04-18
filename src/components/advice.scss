@@ -1,51 +1,86 @@
-@import '../styles.scss';
+@import "../styles.scss";
 
-.advice{
-    width: 40%;
-    height: 35%;
-    background-color: $GrayishBlue;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.ad-number{
-    color: $NeonGreen;
-}
-.ad-body{
-    height: 50%;
-    width: 85%;
-}
-.ad-body-text{
-    color: $LightCyan;
-    font-size: xx-large;
-    text-align: center;
+.advice {
+  width: 40%;
+  height: 35%;
+  background-color: $GrayishBlue;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.divider-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 85%;
+.ad-number {
+  color: $NeonGreen;
+  margin: 0;
+  padding: 0;
 }
-.divider{
-    border-bottom: 1px solid $NeonGreen;
-    width: 60%;
-    margin: 0 5%;
-    border-radius: 2em;
+.ad-body {
+  height: 50%;
+  width: 85%;
+  margin-bottom: 1.5em;
 }
-.divider-pattern{
-    margin: 0;
-    padding: 0;
+.ad-body-text {
+  color: $LightCyan;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.divider-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+}
+.divider {
+  border-bottom: 1px solid $NeonGreen;
+  width: 60%;
+  margin: 0 5%;
+  border-radius: 2em;
+}
+.divider-pattern {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.random-btn {
+  position: absolute;
+  margin-top: 18%;
+  height: 4em;
+  width: 4em;
+  background-color: $NeonGreen;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.random-btn:hover {
+  box-shadow: 1px 1px 15px $NeonGreen;
+}
+
+@media (max-width: 425px) {
+  .advice {
+    width: 90%;
+    height: 60%;
+  }
+  .ad-body {
+    width: 90%;
+    margin-bottom: 5em;
+  }
+  .divider-container {
+    width: 90%;
+  }
+  .divider {
+    border-bottom: 2px solid $NeonGreen;
+  }
+  .random-btn {
     position: absolute;
-}
-
-.random-btn{
-    position: absolute;
-    margin-top: 18%;
+    margin-top: 125%;
     height: 4em;
     width: 4em;
     background-color: $NeonGreen;
@@ -53,11 +88,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+  }
 }
 
-.random-btn{
-    cursor: pointer;
+//
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
-.random-btn:hover{
-    box-shadow: 1px 1px 15px $NeonGreen;
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid $NeonGreen;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: $NeonGreen transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
